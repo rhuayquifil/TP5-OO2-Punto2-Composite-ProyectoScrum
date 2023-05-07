@@ -32,18 +32,13 @@ class PruebasUnitarias {
 	}
 
 	@Test
-	void proyectoScrumConUnaHistoriaDeUsuarioConMultiplesTareas() {
+	void calcularTiempoEstimadoDeHistoriaDeUsuarioConMultiplesTareas() {
 		Item historiaDeUsuario = new ItemDeTrabajo();
 		historiaDeUsuario.agregar(new TareaItem(2));
 		historiaDeUsuario.agregar(new TareaItem(5));
 		historiaDeUsuario.agregar(new TareaItem(5));
 
-		List<Item> listaItemDeTrabajo = new ArrayList<Item>();
-		listaItemDeTrabajo.add(historiaDeUsuario);
-
-		ProtectoScrum proyecto = new ProtectoScrum("proyecto", listaItemDeTrabajo);
-
-		assertEquals(12.0, proyecto.tiempoEstimado());
+		assertEquals(12.0, historiaDeUsuario.tiempoEstimado());
 	}
 
 }
