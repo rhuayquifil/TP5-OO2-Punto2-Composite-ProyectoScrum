@@ -4,16 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class ItemDeTrabajo implements Item {
+public class HistoriaDeUsuarioTareaComponent implements TareaComponent {
 
-	private List<Item> tareas;
+	private List<TareaComponent> tareas;
 
-	public ItemDeTrabajo() {
+	public HistoriaDeUsuarioTareaComponent() {
 		super();
-		this.tareas = new ArrayList<Item>();
+		this.tareas = new ArrayList<TareaComponent>();
 	}
 
-	public void agregar(Item item) {
+	public void agregar(TareaComponent item) {
 		Objects.requireNonNull(item);
 		this.tareas.add(item);
 	}
@@ -21,7 +21,7 @@ public class ItemDeTrabajo implements Item {
 	public double tiempoEstimado() {
 		double tiempoEstimado = 0;
 
-		for (Item item : tareas) {
+		for (TareaComponent item : tareas) {
 			tiempoEstimado += item.tiempoEstimado();
 		}
 

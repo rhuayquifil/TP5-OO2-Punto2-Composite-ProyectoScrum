@@ -1,15 +1,15 @@
 package ar.unrn.domain.model;
 
-public class ItemSpike implements Item {
+public class SpikeTareaComponent implements TareaComponent {
 
 	private int tiempoEstimado;
 
-	public ItemSpike(int tiempoEstimado) {
+	public SpikeTareaComponent(int tiempoEstimado) {
 		this.tiempoEstimado = tiempoEstimado;
 	}
 
 	@Override
-	public void agregar(Item item) {
+	public void agregar(TareaComponent item) {
 	}
 
 	@Override

@@ -3,23 +3,23 @@ package ar.unrn.main;
 import java.util.ArrayList;
 import java.util.List;
 
-import ar.unrn.domain.model.Item;
-import ar.unrn.domain.model.ItemDeTrabajo;
-import ar.unrn.domain.model.ItemSpike;
+import ar.unrn.domain.model.TareaComponent;
+import ar.unrn.domain.model.HistoriaDeUsuarioTareaComponent;
+import ar.unrn.domain.model.SpikeTareaComponent;
 import ar.unrn.domain.model.ProtectoScrum;
-import ar.unrn.domain.model.TareaItem;
+import ar.unrn.domain.model.ItemTareaComponent;
 
 public class Main {
 
 	public static void main(String[] args) {
 
-		Item historiaDeUsuario = new ItemDeTrabajo();
-		historiaDeUsuario.agregar(new TareaItem(2));
-		historiaDeUsuario.agregar(new TareaItem(5));
+		TareaComponent historiaDeUsuario = new HistoriaDeUsuarioTareaComponent();
+		historiaDeUsuario.agregar(new ItemTareaComponent(2));
+		historiaDeUsuario.agregar(new ItemTareaComponent(5));
 
-		Item spike = new ItemSpike(4);
+		TareaComponent spike = new SpikeTareaComponent(4);
 
-		List<Item> listaItemDeTrabajo = new ArrayList<Item>();
+		List<TareaComponent> listaItemDeTrabajo = new ArrayList<TareaComponent>();
 		listaItemDeTrabajo.add(historiaDeUsuario);
 		listaItemDeTrabajo.add(spike);
 

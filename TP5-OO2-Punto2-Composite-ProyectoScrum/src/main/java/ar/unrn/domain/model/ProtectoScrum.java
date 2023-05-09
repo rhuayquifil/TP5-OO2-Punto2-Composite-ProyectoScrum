@@ -5,9 +5,9 @@ import java.util.List;
 public class ProtectoScrum {
 
 	private String nombre;
-	private List<Item> listaItemDeTrabajo;
+	private List<TareaComponent> listaItemDeTrabajo;
 
-	public ProtectoScrum(String nombre, List<Item> listaItemDeTrabajo) {
+	public ProtectoScrum(String nombre, List<TareaComponent> listaItemDeTrabajo) {
 		super();
 		this.nombre = nombre;
 		this.listaItemDeTrabajo = listaItemDeTrabajo;
@@ -16,7 +16,7 @@ public class ProtectoScrum {
 	public double tiempoEstimado() {
 		double tiempoEstimado = 0;
 
-		for (Item item : listaItemDeTrabajo) {
+		for (TareaComponent item : listaItemDeTrabajo) {
 			tiempoEstimado += item.tiempoEstimado();
 		}
 

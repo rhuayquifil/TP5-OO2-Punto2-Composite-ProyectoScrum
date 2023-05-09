@@ -1,10 +1,10 @@
 package ar.unrn.domain.model;
 
-public class TareaItem implements Item {
+public class ItemTareaComponent implements TareaComponent {
 
 	private double tiempoEstimado;
 
-	public TareaItem(double tiempo) {
+	public ItemTareaComponent(double tiempo) {
 		super();
 		this.tiempoEstimado = tiempo;
 	}
@@ -13,6 +13,6 @@ public class TareaItem implements Item {
 		return tiempoEstimado;
 	}
 
-	public void agregar(Item item) {
+	public void agregar(TareaComponent item) {
 	}
 }
